@@ -5,21 +5,27 @@
 
   <%= stylesheet_link_tag    "jquery-ui" %>
   <%= stylesheet_link_tag    "bookshop" %>
-  
-  <%= javascript_include_tag "jquery" %>
-  <%= javascript_include_tag "jquery-ui" %>
-  <%= javascript_include_tag "bookshop" %>
+
   <%= yield(:head) -%>
   
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id='header'>
-	<h1>Bookshop</h1>
-	<%= render "shared/menu" %>
-</div>
-<div id='header-shaddow'></div>
-<%= yield %>
-
+	<div id='header'>
+		<h1>Bookshop</h1>
+		<%= render "shared/menu" %>
+	</div>
+	<div id='header-shaddow'></div>
+	<%= yield %>
+	
+	<%= javascript_include_tag "jquery" %>
+	<%= javascript_include_tag "jquery-ui" %>
+	<%= javascript_include_tag "bookshop" %>
+	<script>
+		$(document).ready(function() {
+			$('button').button();
+		});
+	</script>
+	<%= yield(:scripts) -%>
 </body>
 </html>
