@@ -1,0 +1,45 @@
+<h1>Listing accounts</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>First name2</th>
+    <th>Surname</th>
+    <th>Address line1</th>
+    <th>Address line2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postcode</th>
+    <th>Email</th>
+    <th>Email2</th>
+    <th>Is active</th>
+    <th>Is customer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @accounts.each do |account| %>
+  <tr>
+    <td><%= account.first_name %></td>
+    <td><%= account.first_name2 %></td>
+    <td><%= account.surname %></td>
+    <td><%= account.address_line1 %></td>
+    <td><%= account.address_line2 %></td>
+    <td><%= account.city %></td>
+    <td><%= account.state %></td>
+    <td><%= account.postcode %></td>
+    <td><%= account.email %></td>
+    <td><%= account.email2 %></td>
+    <td><%= account.is_active %></td>
+    <td><%= account.is_customer %></td>
+    <td><%= link_to 'Show', account %></td>
+    <td><%= link_to 'Edit', edit_account_path(account) %></td>
+    <td><%= link_to 'Destroy', account, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Account', new_account_path %>

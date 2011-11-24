@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  customer_id: 1
+  date: 2011-11-24
+  is_sent: 
+  send_method: MyString
+  date_sent: 2011-11-24 18:17:17
+
+two:
+  customer_id: 1
+  date: 2011-11-24
+  is_sent: 
+  send_method: MyString
+  date_sent: 2011-11-24 18:17:17

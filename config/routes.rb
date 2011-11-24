@@ -1,5 +1,13 @@
 Bookshop::Application.routes.draw do
   
+  resources :settings
+
+  resources :invoices
+
+  resources :transactions
+
+  resources :accounts
+
   get "home/index"
 
   # The priority is based upon order of creation:
